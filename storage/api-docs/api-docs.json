@@ -1,0 +1,524 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel OpenApi Projeto_pdwa5 Documentation",
+        "description": "Documentação Swagger para o projeto de PDWA5 gerado pelo L5 Swagger OpenAPI",
+        "contact": {
+            "email": "jefferson.t@aluno.ifsp.edu.br"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/categories": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Get list of Categories",
+                "description": "Returns list of Categories",
+                "operationId": "getCategoriesList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Store new category",
+                "description": "Returns category data",
+                "operationId": "storeCategory",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreCategoryRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
+        },
+        "/api/categories/{id}": {
+            "get": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Get category information",
+                "description": "Returns category data",
+                "operationId": "getCategory",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Category id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Update existing category",
+                "description": "Returns updated category data",
+                "operationId": "updateCategory",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Category id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreCategoryRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Delete existing category",
+                "description": "Deletes a record and returns no content",
+                "operationId": "deleteCategory",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Category id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/api/musics": {
+            "get": {
+                "tags": [
+                    "Musics"
+                ],
+                "summary": "Get list of Musics",
+                "description": "Returns list of Musics",
+                "operationId": "getMusicsList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Musics"
+                ],
+                "summary": "Store new music",
+                "description": "Returns music data",
+                "operationId": "storeMusic",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreMusicRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
+        },
+        "/api/musics/{id}": {
+            "get": {
+                "tags": [
+                    "Musics"
+                ],
+                "summary": "Get music information",
+                "description": "Returns music data",
+                "operationId": "getMusic",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "music id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Musics"
+                ],
+                "summary": "Update existing music",
+                "description": "Returns updated music data",
+                "operationId": "updateMusic",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Music id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreMusicRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Musics"
+                ],
+                "summary": "Delete existing music",
+                "description": "Deletes a record and returns no content",
+                "operationId": "deleteMusic",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Music id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/api/ratings": {
+            "get": {
+                "tags": [
+                    "Ratings"
+                ],
+                "summary": "Get list of Ratings",
+                "description": "Returns list of Ratings",
+                "operationId": "getRatingsList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ratings"
+                ],
+                "summary": "Store new rating",
+                "description": "Returns rating data",
+                "operationId": "storeRating",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreRatingRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
+        },
+        "/api/ratings/{id}": {
+            "get": {
+                "tags": [
+                    "Ratings"
+                ],
+                "summary": "Get rating information",
+                "description": "Returns rating data",
+                "operationId": "getRating",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "rating id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Ratings"
+                ],
+                "summary": "Update existing rating",
+                "description": "Returns updated rating data",
+                "operationId": "updateRating",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Rating id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreRatingRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Ratings"
+                ],
+                "summary": "Delete existing rating",
+                "description": "Deletes a record and returns no content",
+                "operationId": "deleteRating",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Music id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Successful operation"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "StoreCategoryRequest": {
+                "title": "Store Category request",
+                "description": "Store Category request body data",
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "nome": {
+                        "title": "name",
+                        "description": "Name of the category",
+                        "type": "string",
+                        "example": "Rock"
+                    }
+                },
+                "type": "object"
+            },
+            "StoreMusicRequest": {
+                "title": "Store Music request",
+                "description": "Store Music request body data",
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "nome": {
+                        "title": "name",
+                        "description": "Name of the Music",
+                        "type": "string",
+                        "example": "Continha"
+                    },
+                    "artista": {
+                        "title": "artist",
+                        "description": "Creator of the music",
+                        "type": "string",
+                        "example": "Salma e Mac"
+                    },
+                    "descricao": {
+                        "title": "description",
+                        "description": "Description of the music",
+                        "type": "string",
+                        "example": "Single mais recente da dupla"
+                    },
+                    "category_id": {
+                        "title": "category_id",
+                        "description": "Id of the category of the music",
+                        "type": "string",
+                        "example": "1"
+                    }
+                },
+                "type": "object"
+            },
+            "StoreRatingRequest": {
+                "title": "Store Rating request",
+                "description": "Store rating request body data",
+                "required": [
+                    "comment"
+                ],
+                "properties": {
+                    "comentario": {
+                        "title": "coment",
+                        "description": "Coment of the rating",
+                        "type": "string",
+                        "example": "Muito Bom!"
+                    },
+                    "estrelas": {
+                        "title": "stars",
+                        "description": "amount of stars for the music",
+                        "type": "string",
+                        "example": "5"
+                    },
+                    "music_id": {
+                        "title": "music_id",
+                        "description": "Id of the related music",
+                        "type": "string",
+                        "example": "1"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Categories",
+            "description": "API Endpoints of Categories"
+        },
+        {
+            "name": "Musics",
+            "description": "API Endpoints of Musics"
+        },
+        {
+            "name": "Ratings",
+            "description": "API Endpoints of Ratings"
+        }
+    ]
+}
